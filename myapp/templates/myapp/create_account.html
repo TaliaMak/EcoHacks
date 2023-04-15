@@ -12,7 +12,7 @@
 </head>
 
 
-<h1 class = "text-center"> Create Account </h1>
+<h1 class = "text-center text-success"> Welcome! Create Your Account: </h1>
 
 <body>
   <form action = "{% url 'reroute_create_account' %}" method="post">
@@ -20,36 +20,38 @@
 
        </div>
 
-      <div class = "text-center"> First Name:
-    <input class = " mb-4 border-primary-subtle border border-3" type = "text" name = "first_name" required> <!-- makes input a requirement https://www.w3schools.com/tags/att_input_required.asp -->
+      <div class = "text-center text-success"> First Name:
+    <input class = " mb-4 border-success-subtle border border-1" type = "text" name = "first_name" required> <!-- makes input a requirement https://www.w3schools.com/tags/att_input_required.asp -->
 
   </div>
 
        </div>
 
-      <div class = "text-center"> Last Name:
-    <input class = " mb-4 border-primary-subtle border border-3" type = "text" name = "last_name" required> <!-- makes input a requirement https://www.w3schools.com/tags/att_input_required.asp -->
+      <div class = "text-center text-success"> Last Name:
+    <input class = " mb-4 border-success-subtle border border-1" type = "text" name = "last_name" required> <!-- makes input a requirement https://www.w3schools.com/tags/att_input_required.asp -->
 
   </div>
 
        </div>
 
-      <div class = "text-center"> Email Address:
-    <input class = " mb-4 border-primary-subtle border border-3" type = "text" name = "email" required> <!-- makes input a requirement https://www.w3schools.com/tags/att_input_required.asp -->
+      <div class = "text-center text-success"> Email Address:
+    <input class = " mb-4 border-success-subtle border border-1" type = "text" name = "email" required> <!-- makes input a requirement https://www.w3schools.com/tags/att_input_required.asp -->
 
   </div>
-    <div class = "text-center"> Username:
-    <input class = " mb-4 border-primary-subtle border border-3" type = "text" name = "username" required> <!-- makes input a requirement https://www.w3schools.com/tags/att_input_required.asp -->
+    <div class = "text-center text-success"> Username:
+    <input class = " mb-4 border-success-subtle border border-1" type = "text" name = "username" required> <!-- makes input a requirement https://www.w3schools.com/tags/att_input_required.asp -->
     </div>
 
 
-     <div class = "text-center"> Password:
-    <input class =  "mb-4 border-primary-subtle border border-3"  type = "text"  name = "password" required>
+     <div class = "text-center text-success"> Password:
+    <input class =  "mb-4 border-success-subtle border border-1"  type = "text"  name = "password" required>
   </div>
 
-
+    <a class="nav-link active text-center text-success" href="{% url 'login' %}"
+      >I already have an account.</a
+    >
      <div class = "text-center">
-    <input class = "bg-primary fw-bold w-auto p-3 mb-4 border-primary-subtle border-5 rounded-pill border" type="submit" value="Submit">
+    <input class = "btn btn-success" type="submit" value="Create Account">
     </div>
 
   </form>
