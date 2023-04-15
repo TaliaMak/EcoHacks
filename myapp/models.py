@@ -8,11 +8,11 @@ class User(User):
 
 class Transportation(models.Model):
    TYPE = (
-       'bus',
-       'car',
-       'bike',
-       'electric scooter/bike',
-       'walk',
+       (1, 'bus'),
+       (2, 'car'),
+       (3, 'bike'),
+       (4, 'electric scooter/bike'),
+       (5, 'walk'),
    )
    carpool = models.BooleanField(default=False)
    secondhand = models.BooleanField(default=False)
@@ -23,19 +23,19 @@ class Food(models.Model):
    vegetarian = models.BooleanField(default=False)
    organic = models.BooleanField(default=False)
    MEAT_TYPE = (
-       'pork',
-       'poultry',
-       'beef',
-       'seafood'
+       (1, 'pork'),
+       (2, 'poultry'),
+       (3, 'beef'),
+       (4, 'seafood')
    )
    meat_type = models.CharField(max_length=1, choices=MEAT_TYPE)
    
 class MaterialGoods(models.Model):
     ITEM = (
-        'water bottle'
-        'reusable bag'
-        'technology'
+        (1, 'water bottle'),
+        (2, 'reusable bag'),
+        (3, 'technology')
     )
     item = models.CharField(max_length=1, choices=ITEM)
-    months_owned = models.IntegerField()
+    months_owned = models.IntegerField(default=0)
     
