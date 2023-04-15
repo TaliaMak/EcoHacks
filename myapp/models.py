@@ -3,8 +3,13 @@ from django.contrib.auth.models import User  # https://docs.djangoproject.com/en
 
 
 # Create your models here.
-class User(User):
-    pass
+class User(models.Model):
+    first_name = models.CharField(max_length=200, default="nothing")
+    last_name = models.CharField(max_length=200, default="nothing")
+    email = models.CharField(max_length=200, default="nothing")
+    username = models.CharField(max_length=200, default="nothing")
+    password = models.CharField(max_length=200, default="nothing")
+
 
 class Transportation(models.Model):
    TYPE = (
@@ -39,3 +44,4 @@ class MaterialGoods(models.Model):
     item = models.CharField(max_length=1, choices=ITEM)
     months_owned = models.IntegerField(default=0)
     
+
