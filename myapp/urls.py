@@ -19,6 +19,10 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path("", views.login, name="login"),
+    path("/reroute", views.login_reroute, name = "login_reroute"),
+    path("/account", views.account, name="account"),
+    path("/createaccount", views.create_account, name = "create_account"),
+    path("/createaccount/reroute", views.reroute_create_account, name = "reroute_create_account"),
+    path("/createaccount/createdaccount", views.created_account, name="created_account"),
 ]
