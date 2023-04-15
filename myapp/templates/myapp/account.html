@@ -1,2 +1,12 @@
 <!--d -->
-<h1 class = "text-center"> Hello </h1>
+<h1 class = "text-center"> Calculate your carbon emissions! </h1>
+
+<form action = "{% url 'reroute_create_account' %}" method = "post">
+    <input type="radio" name="Food" value="Food"> 
+    <input type="radio" name="Transportation" value="Transportation">
+    <input type="radio" name="" value="Food">  
+    <div class = "text-center">
+        <input class = "bg-primary fw-bold w-auto p-3 mb-4 border-primary-subtle border-5 rounded-pill border" type="submit" value="Submit">
+    </div>
+</form>
+
