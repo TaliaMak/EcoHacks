@@ -1,2 +1,83 @@
-<h1 class = "text-center"> Food </h1>
+<div> Select Food
+
+    <select name="food" id="food-select" required>
+    <option value="">--Please choose an option--</option>
+    <option value="kale">Kale</option>
+    <option value="lettuce">Lettuce</option>
+    <option value="hamburger patty">Hamburger Patty</option>
+    <option value="chicken breast">Chicken Breast</option>
+
+</select>
+
+</div>
+
+<div> Select Amount
+    <select name="Amount" id="amount-select" required>
+    <option value="">--Please choose an option--</option>
+    <option value="10g">10g</option>
+    <option value="20g">20g</option>
+
+
+</select>
+</div>
+
+<p> This food emits:
+    <span class="output"></span>
+</p>
+
+
+<button onclick="getOption()">Check option</button>
+<script type="text/javascript">
+function getOption() {
+        selectElement = document.querySelector('#food-select');
+        selectElement2 = document.querySelector('#amount-select');
+        output = selectElement.options[selectElement.selectedIndex].value;
+        document.querySelector('.output').textContent = output;
+        unit =document.querySelector('.output').textContent
+
+        output2 = selectElement2.options[selectElement2.selectedIndex].value;
+        document.querySelector('.output').textContent = output2;
+        unit2 = document.querySelector('.output').textContent;
+        if(unit == "chicken breast" && unit2 == "10g"){
+        document.querySelector('.output').textContent = "47g CO2e";
+
+        }
+        else if(unit == "kale" && unit2 == "10g"){
+        document.querySelector('.output').textContent = "16g CO2e";
+
+        }
+        else if(unit == "chicken breast" && unit2 == "20g"){
+        document.querySelector('.output').textContent = "94g CO2e";
+
+        }
+        else if(unit == "kale" && unit2 == "20g"){
+        document.querySelector('.output').textContent = "32g CO2e";
+
+        }
+        else if(unit == "hamburger patty" && unit2 == "10g"){
+        document.querySelector('.output').textContent = "433g CO2e";
+
+        }
+        else if(unit == "hamburger patty" && unit2 == "20g"){
+
+        document.querySelector('.output').textContent = "866g CO2e";
+
+        }
+
+        else if(unit == "lettuce" && unit2 == "10g"){
+
+        document.querySelector('.output').textContent = "16g CO2e";
+
+        }
+
+        else if(unit == "lettuce" && unit2 == "20g"){
+
+        document.querySelector('.output').textContent = "32g CO2e";
+
+        }
+
+    }
+</script>
+
+
 

@@ -1,1 +1,34 @@
 <h1 class = "text-center"> Goods </h1>
+
+<div> Select Option
+
+    <select name="food" id="option-select" required>
+    <option value="">--Please choose an option--</option>
+    <option value="reusable bags">Used Reusable Bags</option>
+        <option value="no reusable bags">Did not use Reusable Bags</option>
+
+</select>
+
+    <p> The value of the option selected is:
+    <span class="output"></span>
+</p>
+
+
+<button onclick="getOption()">Check option</button>
+<script type="text/javascript">
+
+    function getOption() {
+        selectElement = document.querySelector('#option-select');
+        output = selectElement.options[selectElement.selectedIndex].value;
+        document.querySelector('.output').textContent = output;
+        units = document.querySelector('.output').textContent
+        if(units == "reusable bags"){
+        document.querySelector('.output').textContent ="You saved 10g CO2e!";
+
+        }
+        else if(units == "no reusable bags"){
+
+        document.querySelector('.output').textContent ="Try to remember your reusable plastic bag for next time!";
+        }
+    }
+</script>
