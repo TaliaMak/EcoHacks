@@ -48,6 +48,10 @@ def reroute_create_account(request):
     user1.last_name = request.POST.get("last_name", False)
     user1.save()
     return render(request, 'myapp/created_account.html')
+
+def calculate_reroute(request):
+    pass
+
 def created_account(request):
     model = User
     return render(request, 'myapp/created_account.html')
