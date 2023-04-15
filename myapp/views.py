@@ -10,10 +10,10 @@ def login(request):
     return render(request, 'myapp/login.html')
 
 def login_reroute(request):
-    users = User.all()
+    users = User.objects.all()
     usern = request.POST.get("username", False)
     password1 = request.POST.get("password", False)
-    if users.all().filter(username = usern) and users.all().filter(username = usern).password == password1:
+    if users.all().filter(username = usern) and users.all().get(username = usern).password == password1:
         return render(request, 'myapp/account.html')
     else:
         return render(request, 'myapp/login_reroute.html') # this page is to say password or username is incorrect
