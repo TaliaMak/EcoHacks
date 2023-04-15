@@ -52,6 +52,20 @@ def created_account(request):
     model = User
     return render(request, 'myapp/created_account.html')
 
+def calculate_reroute(request):
+    value = request.POST.get('Radio', 'Food')
+    
+    return render(request, f'myapp/{value}.html')
+
+def food(request):
+    pass
+
+def goods(request):
+    pass
+
+def transportation(request):
+    pass
+
 
 
 

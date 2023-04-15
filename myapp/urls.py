@@ -25,4 +25,8 @@ urlpatterns = [
     path("/createaccount", views.create_account, name = "create_account"),
     path("/createaccount/reroute", views.reroute_create_account, name = "reroute_create_account"),
     path("/createaccount/createdaccount", views.created_account, name="created_account"),
+    path("/account/calculate_reroute", views.calculate_reroute, name="reroute"),
+    path("/account/Food", views.food, name="Food"),
+    path("/account/Transportation", views.transportation, name="Transportation"),
+    path("/account/Goods", views.goods, name="Goods"),
 ]
